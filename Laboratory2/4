@@ -1,0 +1,23 @@
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int x1, x2, y1, y2, P, S, a, b;
+	cout << "Введите координату первой вершины " << endl;
+	cin >> x1 >> y1;
+	cout << "Введите координату второй вершины " << endl;
+	cin >> x2 >> y2;
+	a = x2 - x1;
+	if (a < 0)
+		a = -a;
+	b = y2 - y1;
+	if (b < 0)
+		b = -b;
+	P = (a + b) * 2;
+	S = a * b;
+	cout << "Площадь прямоугольника равна " << S << endl; 
+	cout << "Периметр прямоугольника равен " << P << endl;
+}
