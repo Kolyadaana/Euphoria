@@ -1,0 +1,27 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	double a, b, S1, S2, S3, S4;
+	cout << "a=";
+	cin >> a;
+	cout << "b=";
+	cin >> b;
+	if (a < 0)
+		a = -a;
+	if (b < 0)
+		b = -b;
+	S1 = a + b;
+	S2 = a - b;
+	S3 = a * b;
+	S4 = a / b;
+	cout << "Сумма модулей a и b равна " << S1 << endl;
+	cout << "Разность модулей a и b равна " << S2 << endl;
+	cout << "Произведение модулей a и b равно " << S3 << endl;
+	cout << "Частное модулей a и b равно " << S4 << endl;
+}
