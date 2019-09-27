@@ -22,7 +22,5 @@ int main()
 		BC = -BC;
 	}
 	S = AC*BC;
-	cout << "Длина отрезка АС равна " << AC << endl; 
-	cout << "Длина отрезка ВС равна " << BC << endl;
 	cout << "AC*BC=" << S;
 }
