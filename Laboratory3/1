@@ -1,0 +1,20 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int A, B, C;
+	cout << "Введите А=";
+	cin >> A;
+	cout << "Введите В=";
+	cin >> B;
+	C = A;
+	A = B;
+	B = C;
+	cout << "A=" << A << endl;
+	cout << "B=" << B;
+}
