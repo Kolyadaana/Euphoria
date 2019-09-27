@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	int a, b, A, B, S1, S2, S3, S4;
+	double a, b, A, B, S1, S2, S3, S4;
 	cout << "a=";
 	cin >> a;
 	cout << "b=";
