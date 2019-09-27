@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int x1, x2, y1, y2, S;
+	cout << "Введите координаты первой точки"<<endl;
+	cin >> x1 >> y1;
+	cout << "Введите координаты второй точки" << endl;
+	cin >> x2 >> y2;
+	S = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+	cout << "Расстояние между точками равно " << S;
+}
