@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int a, b, A, B, S1, S2, S3, S4;
+	cout << "a=";
+	cin >> a;
+	cout << "b=";
+	cin >> b;
+	A = a * a;
+	B = b * b;
+	S1 = A + B;
+	S2 = A - b;
+	S3 = A * B;
+	S4 = A / B;
+	cout << "Сумма квадратов a и b равна " << S1 << endl;
+	cout << "Разность квадратов a и b равна " << S2 << endl;
+	cout << "Произведение квадратов a и b равно " << S3 << endl;
+	cout << "Частное квадратов a и b равно " << S4 << endl;
+}
