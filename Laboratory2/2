@@ -7,17 +7,21 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	double x1, x2, x3, y1, y2, y3, AC, BC, S;
-	cout << "Введите координаты точки A " << endl;
-	cin >> x1 >> y1;
-	cout << "Введите координаты точки B " << endl;
-	cin >> x2 >> y2;
-	cout << "Введите координаты точки C " << endl;
-	cin >> x3 >> y3;
-	AC = sqrt((x3 - x1) * (x3 - x1) + (y3 - y1) * (y3 - y1));
-	BC = sqrt((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2));
+	int A, B, C, AC, BC, S;
+	cout << "Введите координату точки A " << endl;
+	cin >> A;
+	cout << "Введите координату точки B " << endl;
+	cin >> B;
+	cout << "Введите координату точки C " << endl;
+	cin >> C;
+	AC = C - A;
+	BC = C - B;
+	if (AC < 0)
+		AC = -AC;
+	if (BC < 0)
+		BC = -BC;
 	S = AC + BC;
 	cout << "Длина отрезка АС равна " << AC << endl; 
 	cout << "Длина отрезка ВС равна " << BC << endl;
-	cout << "AB+BC=" << S;
+	cout << "AC+BC=" << S;
 }
