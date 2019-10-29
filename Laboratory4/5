@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	double A, B, x;
+	cout << "Введите значения коэффициентов А и В" << endl;
+	cin >> A;
+	cin >> B;
+	x = -(B / A);
+	cout << "Корень уравнения равен " << x;
+}
