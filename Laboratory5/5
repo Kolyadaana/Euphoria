@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale (LC_ALL, "Russian");
+	int A, b;
+	cout << "Введите число ";
+	cin >> A;
+	b = A % 100;
+	A = A / 100;
+	cout << "Полученное число равно " << b << A;	
+}
