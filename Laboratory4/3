@@ -1,0 +1,21 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	double X, A, Y, sum, sumY;
+	cout << "Введите значение X=";
+	cin >> X;
+	cout << "Введите значение A=";
+	cin >> A;
+	cout << "Введите значение Y=";
+	cin >> Y;
+	sum = A / X;
+	sumY = sum * Y;
+	cout << "1 кг конфет стоит " << sum << " руб" << endl;
+	cout << Y << " кг конфет стоит " << sumY << " руб";
+}
