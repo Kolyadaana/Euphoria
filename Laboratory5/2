@@ -7,12 +7,11 @@ using namespace std;
 int main()
 {
 	setlocale (LC_ALL, "Russian");
-	int A, B, D, ost;
+	int A, B, D;
 	cout << "Введите А ";
 	cin >> A;
 	cout << "Введите В ";
 	cin >> B;
 	D = A / B;
-	ost = A - (D * B);
-	cout << "Длина незанятой части отрезка А равна " << ost;
+	cout << "Количество отрезков В на отрезке А равно " << D;
 }
