@@ -1,0 +1,18 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale (LC_ALL, "Russian");
+	int A, B, D, ost;
+	cout << "Введите А ";
+	cin >> A;
+	cout << "Введите В ";
+	cin >> B;
+	D = A / B;
+	ost = A - (D * B);
+	cout << "Длина незанятой части отрезка А равна " << ost;
+}
