@@ -1,0 +1,15 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale (LC_ALL, "Russian");
+	int K ;
+	cout << "Введите значение К ";
+	cin >> K;
+	K = K % 7;
+	cout << "Номер дня недели для К равно " << K;	
+}
