@@ -1,0 +1,27 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale (LC_ALL, "Russian");
+	double A1, A2, B1, B2, C1, C2, x, y, d;
+	cout << "Введите значения коэффициентов А1, В1 и С1 " << endl;
+	cin >> A1;
+	cin >> B1;
+	cin >> C1;
+	cout << "Введите значения коэффициентов А2, В2 и С2 " << endl;
+	cin >> A2;
+	cin >> B2;
+	cin >> C2;
+	d = (A1 * B2 - A2 * B1);
+	if (d != 0)
+	{
+		x = (B2 * C1 - B1 * C2) / d;
+		y = (A1 * C2 - C1 * A2) / d;
+	}
+		else cout << "Решений нет";
+	cout << "Решение системы уравнений: х=" << x << " y=" << y;
+}
