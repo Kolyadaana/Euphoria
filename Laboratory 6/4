@@ -6,8 +6,8 @@ using namespace std;
 
 int main()
 {
-	setlocale (LC_ALL, "Russian");
-	int A, B, C, sa, sb, sum, ost;
+	setlocale(LC_ALL, "Russian");
+	int A, B, C, S, sa, sb, sum, ost;
 	cout << "Введите значение A ";
 	cin >> A;
 	cout << "Введите значение B ";
@@ -16,10 +16,9 @@ int main()
 	cin >> C;
 	sa = A / C;
 	sb = B / C;
-	if (sa > sb)
-		sa = sb;
-	sum = sa * C * C;
+	S = sa * sb;
+	sum = S * C * C;
 	ost = (A * B) - sum;
-	cout << "Количество квардратов, размещенных в прямоугольнике равно" << sa <<endl;	
+	cout << "Количество квардратов, размещенных в прямоугольнике равно " << sa << endl;
 	cout << "Площадь незанятой части равна " << ost;
 }
