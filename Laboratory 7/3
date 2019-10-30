@@ -1,0 +1,23 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale (LC_ALL, "Russian");
+	int A, B, b, i;
+	cout << "Введите A ";
+	cin >> A;
+	b = 0;
+	B = A;
+	while (B>0)
+	{
+		B = B / 10;
+		b += 1;
+	}
+	if ((b == 2) and (A % 2 == 0 ))
+		cout << "Число четное двузначное";
+	    else cout << "Число не соотвествует условию";
+}
