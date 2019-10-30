@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale (LC_ALL, "Russian");
+	int A, B, C, sa, sb, sum, ost;
+	cout << "Введите значение A ";
+	cin >> A;
+	cout << "Введите значение B ";
+	cin >> B;
+	cout << "Введите значение С ";
+	cin >> C;
+	sa = A / C;
+	sb = B / C;
+	if (sa > sb)
+		sa = sb;
+	sum = sa * C * C;
+	ost = (A * B) - sum;
+	cout << "Количество квардратов, размещенных в прямоугольнике равно" << sa <<endl;	
+	cout << "Площадь незанятой части равна " << ost;
+}
