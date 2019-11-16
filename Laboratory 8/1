@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale (LC_ALL, "Russian");
+	int A, B;
+	cout << "Введите значения A, B " << endl;
+	cin >> A;
+	cin >> B;
+	if (A == B)
+	{
+		A = 0;
+		B = 0;
+	}
+	else
+	{
+		if (A > B) B = A;
+		else A = B;
+	}
+	cout << "A=" << A << ", B=" << B;
+}
