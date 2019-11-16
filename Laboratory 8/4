@@ -1,0 +1,22 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale (LC_ALL, "Russian");
+	double xa, ya;
+	cout << "Введите координаты А" << endl;
+	cin >> xa;
+	cin >> ya;
+	if ((xa>0) and (ya>0))
+		cout << "Точка лежит в 1 четверти" << endl;
+	if ((xa > 0) and (ya < 0))
+		cout << "Точка лежит в 4 четверти" << endl;
+	if ((xa < 0) and (ya > 0))
+		cout << "Точка лежит вo 2 четверти" << endl;
+	if ((xa < 0) and (ya < 0))
+		cout << "Точка лежит в 3 четверти" << endl;
+}
