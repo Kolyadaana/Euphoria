@@ -1,0 +1,52 @@
+НЕ РОБИТ
+
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int N;
+	string c, n="С", s="Ю", w="З", e="В";
+	cout << "Введитe  исходное направление робота " << endl;
+	cin >> c;
+	cout << "Пошлите команду" << endl;
+	cin >> N;
+
+	if (N == 0)
+	{
+		if (c == n)
+			cout << "север";
+		if (c == e)
+			cout << "восток";
+		if (c == s)
+			cout << "юг";
+		if (c == w)
+			cout << "запад";
+	}
+	if (N == 1)
+	{
+		if (c == n)
+			cout << "запад";
+		if (c == e)
+			cout << "север";
+		if (c == s)
+			cout << "восток";
+		if (c == w)
+			cout << "юг";
+	}
+	if (N == -1)
+	{
+		if (c == n)
+			cout << "восток";
+		if (c == e)
+			cout << "юг";
+		if (c == s)
+			cout << "запад";
+		if (c == w)
+			cout << "север";
+	}
+}
