@@ -1,0 +1,32 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale (LC_ALL, "Russian");
+	int A, d, a;
+	cout << "Введитe  А" << endl;
+	cin >> A;
+	a = A;
+	d = 0;
+	while (a > 0)
+	{
+		a = a/10 ;
+		d += 1;
+	}
+	if ((d == 1) and (A % 2 == 0))
+		cout << "Четное однозначное число";
+	if ((d == 1) and (A % 2 != 0))
+		cout << "Нечетное однозначное число";
+	if ((d == 2) and (A % 2 == 0))
+		cout << "Четное двузначное число";
+	if ((d == 2) and (A % 2 != 0))
+		cout << "Нечетное двузначное число";
+	if ((d == 3) and (A % 2 == 0))
+		cout << "Четное трёхзначное число";
+	if ((d == 3) and (A % 2 != 0))
+		cout << "Нечетное трёхзначное число";
+}
