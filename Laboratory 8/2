@@ -1,0 +1,22 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale (LC_ALL, "Russian");
+	int A, B, C, sum;
+	cout << "Введите значения A, B, C " << endl;
+	cin >> A;
+	cin >> B;
+	cin >> C;
+	if ((A<=C) and (A<=B))
+		sum = C + B;
+	if ((B<=A) and (B<=C))
+		sum = A + C;
+	if ((C<=A) and (C<=B))
+		sum = A + B;
+	cout << "Сумма наибольших чисел равна " << sum;
+}
