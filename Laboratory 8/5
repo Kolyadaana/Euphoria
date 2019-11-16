@@ -1,0 +1,23 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale (LC_ALL, "Russian");
+	int A;
+	cout << "Введитe  А" << endl;
+	cin >> A;
+	if ((A > 0) and A % 2 == 0)
+		cout << "Положительное четное число";
+	if ((A < 0) and A % 2 == 0)
+		cout << "Отрицательное четное число";
+	if ((A > 0) and A % 2 != 0)
+		cout << "Положительное нечетное число";
+	if ((A < 0) and A % 2 != 0)
+		cout << "Отрицательное нечетное число";
+	if (A==0)
+		cout << "Нулевое число";
+}
