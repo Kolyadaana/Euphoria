@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+double PowerA3(double A, double B)
+{
+	B = A * A * A;
+	return B;
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	double a, b = 0;
+	int i = 0;
+	while (i < 5)
+	{
+		cout << "Введите А = ";
+		cin >> a;
+		cout << a << " в кубе равно " << PowerA3(a, b) << endl;
+		i += 1;
+	}
+}
