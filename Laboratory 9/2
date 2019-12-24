@@ -1,5 +1,3 @@
-НЕ РОБИТ
-
 #include <iostream>
 #include <math.h>
 #include <string>
@@ -8,45 +6,47 @@ using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	int N;
-	string c, n="С", s="Ю", w="З", e="В";
-	cout << "Введитe  исходное направление робота " << endl;
-	cin >> c;
-	cout << "Пошлите команду" << endl;
-	cin >> N;
-
-	if (N == 0)
+	setlocale (LC_ALL, "Russian");
+	int B;
+	string A;
+	cout << "Введитe направление робота" << endl;
+	cin >> A;
+	cout << "Введите команду" << endl;
+	cin >> B;
+	if (A == "Ю")
 	{
-		if (c == n)
-			cout << "север";
-		if (c == e)
-			cout << "восток";
-		if (c == s)
-			cout << "юг";
-		if (c == w)
-			cout << "запад";
+		switch (B)
+		{
+		case 1: cout << "З"; break;
+		case -1: cout << "В"; break;
+		case 0: cout << "Ю"; break;
+		}
 	}
-	if (N == 1)
+	if (A == "С")
 	{
-		if (c == n)
-			cout << "запад";
-		if (c == e)
-			cout << "север";
-		if (c == s)
-			cout << "восток";
-		if (c == w)
-			cout << "юг";
+		switch (B)
+		{
+		case 1: cout << "В"; break;
+		case -1: cout << "З"; break;
+		case 0: cout << "С"; break;
+		}
 	}
-	if (N == -1)
+	if (A == "В")
 	{
-		if (c == n)
-			cout << "восток";
-		if (c == e)
-			cout << "юг";
-		if (c == s)
-			cout << "запад";
-		if (c == w)
-			cout << "север";
+		switch (B)
+		{
+		case 1: cout << "Ю"; break;
+		case -1: cout << "С"; break;
+		case 0: cout << "В"; break;
+		}
+	}
+	if (A == "З")
+	{
+		switch (B)
+		{
+		case 1: cout << "С"; break;
+		case -1: cout << "В"; break;
+		case 0: cout << "З"; break;
+		}
 	}
 }
