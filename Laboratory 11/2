@@ -1,0 +1,20 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int a, b, i, S;
+	cout << "Введите число A" << endl;
+	cin >> a;
+	cout << "Введите число B" << endl;
+	cin >> b;
+	i = b;
+	while (i <= (a - b))
+		i += b;
+	S = a - i;
+	cout << "Длина незанятой части равна " << S;
+}
