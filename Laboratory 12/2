@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int Sign(double x) //−1, если X < 0; 0, если X = 0; 1, если X > 0.
+int Sign(double x) 
 {
 	if (x < 0) return-1;
 	if (x == 0) return 0;
@@ -13,9 +13,10 @@ int Sign(double x) //−1, если X < 0; 0, если X = 0; 1, если X > 0.
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	double x;
-		cout << "Введите x = ";
-		cin >> x;
-		cout << Sign(x);
+	setlocale(LC_ALL, "Russian"); 
+		cout << "Введите A  = ";
+		cin >> A;
+		cout << "Введите B = ";
+		cin >> B;
+		cout <<"Значение выражения равно "<< Sign(A)+Sign(B);
 }
