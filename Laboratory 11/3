@@ -1,0 +1,23 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n, i, S, k;
+	cout << "Введите число N" << endl;
+	cin >> n;
+	i = 0;
+	S = 0;
+	while (S < n)
+	{
+		i += 1;
+		S += i;
+		k = i;
+	}
+	cout << "Наименьшее К равно " << k << endl;
+	cout << "Сумма 1+2+...+К равна " << S;
+}
