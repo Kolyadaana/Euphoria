@@ -4,19 +4,20 @@
 
 using namespace std;
 
-int Sign(double x) 
+double RingS(double R1, double R2) 
 {
-	if (x < 0) return-1;
-	if (x == 0) return 0;
-	if (x > 0) return 1;
+	double S, pi = 3.14;
+	S = pi * R1 * R1 - pi * R2 * R2;
+	return S;
 }
 
 int main()
 {
 	setlocale(LC_ALL, "Russian"); 
-		cout << "Введите A  = ";
+	double A, B;
+		cout << "Введите внешний радиус  ";
 		cin >> A;
-		cout << "Введите B = ";
+		cout << "Введите внутренний радиус ";
 		cin >> B;
-		cout <<"Значение выражения равно "<< Sign(A)+Sign(B);
+		cout <<"Площадь кольца равна "<< RingS(A, B);
 }
