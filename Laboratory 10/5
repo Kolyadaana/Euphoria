@@ -1,0 +1,31 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int N;
+	double A, S, M, i, j;
+	cout << "Введите число A" << endl;
+	cin >> A;
+	cout << "Введите число N" << endl;
+	cin >> N;
+	i = 2;
+	j = 1;
+	S = 1;
+	M = 0;
+		while (i <= N)
+		{
+			S+= pow(A, i);
+			i += 2;
+		}
+		while (j <= N)
+		{
+			M += pow(A, j);
+			j += 2;
+		}
+		cout << (S - M) << endl;
+}
