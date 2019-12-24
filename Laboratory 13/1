@@ -1,0 +1,20 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian"); 
+	int j, N;
+	cout << "Введите N " ;
+	cin >> N;
+	int* array = new int [N];
+	j = -1;
+	for (int i = 0; i < N; i++) {
+		array[i] = j + 2;
+		cout << "array[" << i << "]=" << array[i] << endl;
+		j += 2;
+	}
+}
