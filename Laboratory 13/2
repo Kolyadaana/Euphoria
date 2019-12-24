@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian"); 
+	int j, N, A, x = 1, D;
+	cout << "Введите N " ;
+	cin >> N;
+	cout << "Введите A ";
+	cin >> A;
+	cout << "Введите D ";
+	cin >> D;
+	int* array = new int [N];
+	array[0] = A;
+	cout << "array[0]=" << array[0] << endl;
+	for (int i = 1; i < N; i++) {
+		array[i] = A * pow(D,x);
+		cout << "array[" << i << "]=" << array[i] << endl;
+		x += 1;
+	}
+}
