@@ -1,0 +1,27 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int Quarter(double x, double y)
+{
+	if ((x > 0) and (y > 0)) return 1;
+	if ((x < 0) and (y > 0)) return 2;
+	if ((x < 0) and (y < 0)) return 3;
+	if ((x > 0) and (y < 0)) return 4;
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Russian"); 
+	double  x, y, i=0;
+	while (i < 3)
+	{
+		cout << "Введите х ";
+		cin >> x;
+		cout << "Введите у ";
+		cin >> y;
+		cout << "Точка находится в " << Quarter(x, y) << " координатной четверти"<<endl;
+	}
+}
