@@ -1,0 +1,22 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int A, B;
+	cout << "Введите число A" << endl;
+	cin >> A;
+	cout << "Введите число B" << endl;
+	cin >> B;
+	while (A != B)
+	{
+		if (A > B)
+			A = A - B;
+		else B = B - A;
+	}
+	cout << "НОД равен " << A;
+}
