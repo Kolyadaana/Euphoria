@@ -1,0 +1,30 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale (LC_ALL, "Russian"); 
+	int d, a, N, i = 4;
+	double c;
+	cout << "Введите N " ;
+	cin >> N;
+	int* A = new int [N];
+	for (i = 0; i < N; i++)
+	{
+		cout << "A[" << i << "]=";
+		cin >> A[i];
+	}
+	d = A[2];
+	while (i < N)
+	{ 
+		if (A[i] < d)
+		{
+			d = A[i];
+		}
+		i += 2;
+	}
+	cout << d;
+}
