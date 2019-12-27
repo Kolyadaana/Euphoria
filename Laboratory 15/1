@@ -1,0 +1,38 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int S, i, c;
+    cout << "Введите длину массивов А и В ";
+	cin >> S;
+	int* a = new int[S];
+	for (int i = 0; i < S; i++)
+	{
+		cout << "a[" << i << "]=";
+		cin >> a[i];
+	}
+
+	int* b = new int[S];
+	for (int i = 0; i < S; i++)
+	{
+		cout << "b[" << i << "]=";
+		cin >> b[i];
+	}
+
+	for (int i = 0; i < S; i++)
+	{
+		c = a[i];
+		a[i] = b[i];
+		b[i] = c;
+	}
+
+	cout << "Массив А: ";
+	for (i = 0; i < S; i++) cout << a[i] << " ";
+	cout << "Массив B: ";
+	for (i = 0; i < S; i++) cout << b[i] << " ";
+}
