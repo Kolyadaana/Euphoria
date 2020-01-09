@@ -7,8 +7,7 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	int S, i, c, d = 0, k;
-
+	int S, i;
 	cout << "Введите длину массивa A ";
 	cin >> S;
 	int* a = new int[S];
@@ -17,23 +16,27 @@ int main()
 		cout << "a[" << i << "]=";
 		cin >> a[i];
 	}
-	d = 0;
-	for (i = 0;i < S - d; i++)
+
+	for (i = 0; i < S - 1; i++)
 	{
-		for (int j = i+1; j < S - 1 j++)
+		int d = i + 1;
+		while (a[i] == a[d])
 		{
-			if (a[i] == a[j])
+			d++;
+		}
+		if (d > (i + 1))
+		{
+			d--;
+			int c = 1;
+			while ((d + c) < S)
 			{
-				d += 1;
-				for (j;j<S-d;j++)
-					{
-						k = a[j];
-						a[j] = a[j + 1];
-						a[j + 1] = a[j];
-					}
-				
+				a[i + c] = a[d + c];
+				c++;
 			}
+			S = S - (d - i);
 		}
 	}
-	for (i = 0; i < S - d; i++) cout << a[i] << " ";
+
+	cout << "Массив A: ";
+	for (i = 0; i < S; i++) cout << a[i] << " ";
 }
