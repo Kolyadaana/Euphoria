@@ -1,0 +1,48 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int S, x1, y1, x2, y2, x3, y3;
+	double a, b, c, P=0;
+	cout << "Введите количество точек";
+	cin >> S;
+	int* x = new int[S];
+	int* y = new int[S];
+	for (int i = 0; i < S; i++)
+	{
+		cout << "Введите координаты точки " << endl;
+		cin >> x[i] >> y[i];
+	}
+	for (int i = 0; i < S - 2; i++)
+	{
+		for (int j = i + 1; j < S - 1; j++)
+		{
+			for (int k = i + 2; k < S; k++)
+			{
+				a = sqrt(pow((x[j] - x[i]), 2) + pow((y[j] - y[i]), 2));
+				b = sqrt(pow((x[k] - x[j]), 2) + pow((y[k] - y[j]), 2));
+				c = sqrt(pow((x[i] - x[k]), 2) + pow((y[i] - y[k]), 2));
+				if ((a < b + c) and (b < a + c) and (c < a + b) and (a + b + c > P))
+				{
+					P = a + b + c;
+					x1 = x[i];
+					x2 = x[j];
+					x3 = x[k];
+					y1 = y[i];
+					y2 = y[j];
+					y3 = y[k];
+				}
+			}
+		}
+	}
+
+	cout << "Наибольший периметр равен "<< P << endl;
+	cout << "A (" << x1 << "," << y1 << ")" << endl;
+	cout << "B (" << x2 << "," << y2 << ")"<<endl;
+	cout << "C (" << x3 << "," << y3 << ")"<<endl;
+}
