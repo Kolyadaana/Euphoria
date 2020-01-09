@@ -1,0 +1,27 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int N, x, y, X, Y, S, max=0;
+	cout << "Введите количество точек";
+	cin >> N;
+	for (int i = 0; i < N; i++)
+	{
+		cout << "Введите координаты точки " << endl;
+		cin >> x >> y;
+		S = x * x + y * y;
+		if ((S > max) and (x > 0) and (y > 0))
+		{
+			max = S;
+			X = x;
+			Y = y;
+		}
+	}
+	if (max > 0) cout << "Наиболее удаленная точка А (" << X << "," << Y << ")";
+	else cout << "(0,0)";
+}
