@@ -1,0 +1,50 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int S, i, c, b, k, L;
+	cout << "Введите значение L ";
+	cin >> L;
+	cout << "Введите длину массивa A ";
+	cin >> S;
+	int* a = new int[S];
+	int* B = new int[S];
+	int* C = new int[S];
+	for (int i = 0; i < S; i++)
+	{
+		cout << "a[" << i << "]=";
+		cin >> a[i];
+	}
+	b = 1;
+	c = 0;
+	k = 0;
+	for (i = 0; i < S; i++)
+	{
+		if (a[i] == a[i + 1])
+		{
+			b++;
+		}
+		else
+		{
+			if (b > L)
+			{
+				B[k] = 0;
+				B[k + 1] = a[i + 1];
+				b = 1;
+				k++;
+			}
+			else 
+			{
+				B[k] = a[i];
+				k++;
+			}
+		}
+	}
+	cout << "Массив A: ";
+	for (i = 0; i < k; i++) cout << B[i] << " ";
+}
